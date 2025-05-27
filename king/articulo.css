@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 40px;
+  height: auto;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.producto-detalle {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.producto-principal {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.product-image {
+  flex: 0 0 300px;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.producto-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.producto-info h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #d32f2f;
+  margin: 15px 0;
+}
+
+.seller {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.details,
+.comments {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.details h2,
+.comments h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.details p,
+.comments p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+footer {
+  background-color: #f4f4f4;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}

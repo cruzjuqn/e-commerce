@@ -74,6 +74,30 @@ main {
   filter: grayscale(1);
 }
 
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+  margin-right: 16px; /* espacio entre botones y carrito */
+  align-items: center;
+}
+
+.auth-buttons .btn {
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1.5px solid #16A34A; /* color verde */
+  border-radius: 20px;
+  color: #16A34A;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-buttons .btn:hover {
+  background-color: #16A34A;
+  color: white;
+}
+
+
 /* ==== CARRITO ==== */
 .cart-link {
   color: #4B5563;
@@ -146,4 +170,39 @@ footer {
   padding: 16px;
   color: #4B5563;
   font-weight: 500;
+}
+
+
+/* ==== RESPONSIVE ==== */
+
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;       /* mejor que 100vw para evitar scroll horizontal */
+    max-width: 100%;
+    padding: 8px;
+    box-sizing: border-box;  /* importantísimo para que padding no expanda ancho */
+    overflow-x: hidden;      /* para asegurar que no haya overflow horizontal */
+  }
+
+  .search-bar {
+    width: 99%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .search-input {
+    width: 99%;
+    box-sizing: border-box;
+  }
+
+  .auth-buttons {
+    width: 100%;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+  }
 }
