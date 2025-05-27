@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h2>Registro</h2>
+    <form onsubmit="return validarRegistro()">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+
+      <label for="nuevaContraseña">Contraseña</label>
+      <input type="password" id="nuevaContraseña" required>
+
+      <label for="confirmarContraseña">Confirmar Contraseña</label>
+      <input type="password" id="confirmarContraseña" required>
+
+      <button type="submit">Registrarse</button>
+    </form>
+    <p id="mensaje-error"></p>
+    <p class="registro-link">
+      ¿Ya tenés cuenta? <a href="inicio.html">Iniciar sesión</a>
+    </p>
+  </div>
+</body>
+</html>
