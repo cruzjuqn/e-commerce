@@ -41,6 +41,52 @@ main {
   color: #4B5563;
 }
 
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 100;
+  min-width: 150px;
+}
+
+.menu a {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #007BFF; /* un azul vivo */
+  color: white;
+  cursor: pointer;
+}
+
+.menu-toggle:checked + .menu-icon + .menu {
+  display: flex;
+}
+
+
 /* ==== BARRA DE BÚSQUEDA ==== */
 .search-bar {
   display: flex;
@@ -117,26 +163,31 @@ main {
 /* ==== PRODUCTOS ==== */
 .grid-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px; 
-  justify-content: center; 
+  flex-wrap: nowrap;       /* Sin salto de línea */
+  gap: 20px;               /* Espacio entre cards, ajusta si quieres */
+  justify-content: space-between; /* O center, según prefieras */
   padding: 32px;
-  max-width: 740px; 
-  margin: 0 auto; 
+  max-width: 100%;         /* Quitar límite ancho para que use todo el ancho */
+  width: 100%;
   box-sizing: border-box;
+  overflow-x: auto;        /* Para permitir scroll horizontal si hay muchos cards */
 }
 
 .card {
-  flex: 0 0 220px;
+  position: relative; /* Para posicionar el ícono de corazón */
+  flex: 1 1 0;
+  max-width: 100%;
+  min-width: 180px;
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   padding: 16px;
   text-align: center;
-  max-height: 300px;
+  max-height: 360px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
 
 .card:hover {
   transform: scale(1.05);
@@ -159,6 +210,34 @@ main {
   color: #16A34A;
   font-weight: bold;
   margin: 0;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #e11d48;
+  user-select: none;
+}
+
+.add-btn {
+  margin-top: 50px;
+  padding: 8px 16px;
+  width: 100%;
+  height: 15%;
+  background-color: #16A34A;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #15803d;
 }
 
 
