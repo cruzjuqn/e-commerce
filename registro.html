@@ -2,13 +2,34 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Registro</title>
   <link rel="stylesheet" href="inicio.css">
 </head>
 <body>
+
+  <header class="header">
+    <div class="logo-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Logo Adidas" class="logo-img" />
+      <a href="index.html"><span class="header-title">Almacén</span></a>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar productos..." class="search-input">
+      <button class="search-button">
+        <img src="https://images.vexels.com/media/users/3/140723/isolated/preview/158241d2079a635fb0cae49accb56da5-icono-de-lupa.png?w=360" alt="Buscar" class="search-icon">
+      </button>
+    </div>
+
+    <a href="carrito.html" class="cart-link">
+      <svg class="cart-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9m-5-4h-4" />
+      </svg>
+    </a>
+  </header>
+
   <div class="contenedor">
-    <h2>Registro</h2>
+    <h2>Registrarse</h2>
     <form onsubmit="return validarRegistro()">
       <label for="nombre">Nombre</label>
       <input type="text" id="nombre" required>
@@ -16,18 +37,16 @@
       <label for="email">Email</label>
       <input type="email" id="email" required>
 
-      <label for="nuevaContraseña">Contraseña</label>
-      <input type="password" id="nuevaContraseña" required>
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" required>
 
-      <label for="confirmarContraseña">Confirmar Contraseña</label>
-      <input type="password" id="confirmarContraseña" required>
+      <label for="confirmar">Confirmar Contraseña</label>
+      <input type="password" id="confirmar" required>
 
-      <button type="submit">Registrarse</button>
+      <button type="submit">Crear cuenta</button>
     </form>
     <p id="mensaje-error"></p>
-    <p class="registro-link">
-      ¿Ya tenés cuenta? <a href="inicio.html">Iniciar sesión</a>
-    </p>
+    <p class="registro-link">¿Ya tenés cuenta? <a href="inicio.html">Iniciar sesión</a></p>
   </div>
 </body>
 </html>

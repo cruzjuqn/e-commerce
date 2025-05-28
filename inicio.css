@@ -1,18 +1,76 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f0f0f0;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
   display: flex;
-  height: 100vh;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-img {
+  height: 32px;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4B5563;
+  text-decoration: none;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.search-input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-icon {
+  height: 20px;
+}
+
+.cart-link {
+  margin-left: 12px;
+  color: #4B5563;
+  text-decoration: none;
+}
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .contenedor {
+  max-width: 400px;
+  margin: 40px auto;
   background: white;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 h2 {
@@ -48,15 +106,8 @@ button:hover {
   text-align: center;
   margin-top: 1rem;
 }
+
 .registro-link {
   text-align: center;
   margin-top: 1rem;
-  font-size: 0.9rem;
-}
-.registro-link a {
-  color: #007bff;
-  text-decoration: none;
-}
-.registro-link a:hover {
-  text-decoration: underline;
 }
