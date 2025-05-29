@@ -142,11 +142,5 @@ button:hover {
     content: attr(data-label);
     font-weight: bold;
     display: block;
-    margin-bottom: 5px;
-    color: #6b7280;
+    margin-bottom: 5px;    color: #6b7280;<<<<<<< HEAD
   }
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> 31b48dd4340dd3de86b46586d1356b534741a043
