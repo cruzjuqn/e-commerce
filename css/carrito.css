@@ -142,6 +142,7 @@ button:hover {
     content: attr(data-label);
     font-weight: bold;
     display: block;
-    margin-bottom: 5px;    color: #6b7280;<<<<<<< HEAD
+    margin-bottom: 5px;    
+    color: #6b7280;
   }
 }
