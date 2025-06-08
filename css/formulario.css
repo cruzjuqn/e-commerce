@@ -83,3 +83,49 @@ textarea {
   color: white; /* para que no cambie color */
   text-decoration: none;
 }
+
+form{
+    width: 80%;
+}
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.form-buttons button.agregar-producto {
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #3498db; /* Azul (opcional) */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-buttons button.agregar-producto:hover {
+  background-color: #2980b9;
+}
+
+
+/* Botón Cancelar estilo rojo */
+.cancelar-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #e74c3c; /* Rojo */
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: bold;
+  height: 1,5vh;
+  padding: 4%;
+  transition: background-color 0.3s ease;
+}
+
+.cancelar-btn:hover {
+  background-color: #c0392b; /* Rojo más oscuro al pasar el mouse */
+}
+
