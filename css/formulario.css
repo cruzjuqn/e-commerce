@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #111827;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #374151;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.agregar-producto {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.agregar-producto:hover {
+  background-color: #15803d;
+}
+
+.eliminar-btn {
+  background-color: #ef4444;
+  color: white;
+  padding: 10px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  display: inline-block; /* para que tome padding y ancho */
+  text-decoration: none; /* sin subrayado */
+  border: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.eliminar-btn:hover {
+  background-color: #b91c1c;
+  color: white; /* para que no cambie color */
+  text-decoration: none;
+}

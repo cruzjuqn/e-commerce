@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Almacén Adidas</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/administracion.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 <header class="header">
@@ -45,13 +46,17 @@
 </header>
 
 <main>
+    <div class="posicion">
+      <a href="formulario.html" class="agregar-producto">Agregar Producto</a>
+</div>
 <div class="grid-container">
-  <div class="card">
+    <div class="card">
     <div class="heart-icon">❤️</div>
     <img src="https://cdn-icons-png.flaticon.com/512/3014/3014502.png" alt="Pan" />
     <a href="articulo.html"><h3>Pan</h3></a>
     <p class="price">$100</p>
-    <button class="add-btn">Agregar</button>
+    <a href="editar.html" class="boton-editar">Editar<i class="fa-solid fa-pencil"></i></a>
+    <label for="btn-modal" class="add-btn-2">Eliminar <i class="fa-solid fa-trash-can"></i></label>
   </div>
 
   <div class="card">
@@ -59,7 +64,8 @@
     <img src="https://cdn-icons-png.freepik.com/256/8876/8876515.png?semt=ais_hybrid" alt="Leche" />
     <a href="articulo.html"><h3>Leche</h3></a>
     <p class="price">$150</p>
-    <button class="add-btn">Agregar</button>
+    <a href="editar.html" class="boton-editar">Editar<i class="fa-solid fa-pencil"></i></a>    
+    <label for="btn-modal" class="add-btn-2">Eliminar <i class="fa-solid fa-trash-can"></i></label>
   </div>
 
   <div class="card">
@@ -67,7 +73,8 @@
     <img src="https://cdn-icons-png.flaticon.com/512/5520/5520712.png" alt="Arroz" />
     <a href="articulo.html"><h3>Arroz</h3></a>
     <p class="price">$200</p>
-    <button class="add-btn">Agregar</button>
+    <a href="editar.html" class="boton-editar">Editar<i class="fa-solid fa-pencil"></i></a>
+    <label for="btn-modal" class="add-btn-2">Eliminar <i class="fa-solid fa-trash-can"></i></label>
   </div>
 
   <div class="card">
@@ -75,7 +82,8 @@
     <img src="https://cdn-icons-png.flaticon.com/512/5381/5381347.png" alt="Aceite" />
     <a href="articulo.html"><h3>Aceite</h3></a>
     <p class="price">$250</p>
-    <button class="add-btn">Agregar</button>
+    <a href="editar.html" class="boton-editar">Editar<i class="fa-solid fa-pencil"></i></a>
+    <label for="btn-modal" class="add-btn-2">Eliminar <i class="fa-solid fa-trash-can"></i></label>
   </div>
 
   <div class="card">
@@ -83,7 +91,8 @@
     <img src="https://cdn-icons-png.flaticon.com/256/10552/10552057.png" alt="Azúcar" />
     <a href="articulo.html"><h3>Azucar</h3></a>
     <p class="price">$180</p>
-    <button class="add-btn">Agregar</button>
+    <a href="editar.html" class="boton-editar">Editar<i class="fa-solid fa-pencil"></i></a>
+    <label for="btn-modal" class="add-btn-2">Eliminar <i class="fa-solid fa-trash-can"></i></label>
   </div>
 
   <div class="card">
@@ -91,11 +100,25 @@
     <img src="https://cdn-icons-png.flaticon.com/512/683/683981.png" alt="Vino" />
     <a href="articulo.html"><h3>Vino</h3></a>
     <p class="price">$500</p>
-    <button class="add-btn">Agregar</button>
+    <a href="editar.html" class="boton-editar">Editar<i class="fa-solid fa-pencil"></i></a>
+    <label for="btn-modal" class="add-btn-2">Eliminar <i class="fa-solid fa-trash-can"></i></label>
+</div>
+<input type="checkbox" id="btn-modal">
+<div class="container-modal">
+  <div class="content-modal">
+    <h2>¿Esta seguro que quiere eliminar este producto?</h2>
+    <p>¡Esta accion es irreversible!</p>
+    <div class="btn-confirmar">
+      <label for="btn-modal">Eliminar</label>
+    </div>
+    <div class="btn-cerrar">
+      <label for="btn-modal">Cerrar</label>
+    </div>
   </div>
+  <label for="btn-modal" class="cerrar-modal"></label>
 </div>
 </main>
-  <footer>
+    <footer>
     Valentin Reyes - Emanuel Alvarez - Sobrino Juancruz - 7MO 1ra Programacion Grupo A
   </footer>
 </body>
