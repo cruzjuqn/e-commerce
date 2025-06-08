@@ -177,7 +177,7 @@ main {
   transition: background-color 0.3s;
   text-align: center;
   line-height: 24px;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .agregar-producto:hover {
