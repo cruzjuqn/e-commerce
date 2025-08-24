@@ -1,0 +1,66 @@
+[
+        {
+            "id": 1,
+            "title": "Remera",
+            "price": 25000,
+            "description": "Remera Manga Corta",
+            "image" : "remera.jpg",
+            "stock" : 50
+        },
+        {
+            "id": 2,
+            "title": "Campera",
+            "price": 35000,
+            "description": "Campera Negra",
+            "image" : "campera.png",
+            "stock" : 50
+        },
+        {
+            "id": 3,
+            "title": "Pantalon",
+            "price": 25000,
+            "description": "Pantalon cargo",
+            "image" : "pantalon.jpg",
+            "stock" : 55
+        },
+        {
+            "id": 4,
+            "title": "Remera Blanca",
+            "price": 55000,
+            "description": "Remera Manga Corta",
+            "image" : "remera corta.jpg",
+            "stock" : 85
+        },
+        {
+            "id": 5,
+            "title": "shark",
+            "price": 60000,
+            "description": "Shark",
+            "image" : "Shark.jpg",
+            "stock" : 145
+        },
+        {
+            "id": 6,
+            "title": "Zapatillas",
+            "price": 80000,
+            "description": "Zapatillas Puma",
+            "image" : "zapatilla puma.jpg",
+            "stock" : 145
+        },
+        {
+            "id": 7,
+            "title": "shark",
+            "price": 60000,
+            "description": "Shark",
+            "image" : "Shark.jpg",
+            "stock" : 145
+        },
+        {
+            "id": 8,
+            "title": "shark",
+            "price": 60000,
+            "description": "Shark",
+            "image" : "Shark.jpg",
+            "stock" : 145
+        }
+    ]

@@ -240,6 +240,31 @@ main {
   background-color: #15803d;
 }
 
+.card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-favorito {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 24px;
+  color: black; 
+  cursor: pointer;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.card-favorito.relleno {
+  color: red; 
+}
+
+
 
 /* ==== FOOTER ==== */
 footer {
@@ -259,11 +284,11 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    width: 100%;       /* mejor que 100vw para evitar scroll horizontal */
+    width: 100%;   
     max-width: 100%;
     padding: 8px;
-    box-sizing: border-box;  /* importantísimo para que padding no expanda ancho */
-    overflow-x: hidden;      /* para asegurar que no haya overflow horizontal */
+    box-sizing: border-box;  
+    overflow-x: hidden;    
   }
 
   .search-bar {

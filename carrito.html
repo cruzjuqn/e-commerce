@@ -10,42 +10,41 @@
 <body>
 
   <header class="header">
-  <div class="logo-container">
-    <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Logo Adidas" class="logo-img" /></a>
-    <a href="index.html"><span class="header-title">Almacén</span></a>
-  </div>
+    <div class="logo-container">
+      <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Logo Adidas" class="logo-img" /></a>
+      <a href="index.html"><span class="header-title">Almacén</span></a>
+    </div>
 
-  <div class="menu-container">
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">☰</label>
+    <div class="menu-container">
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">☰</label>
+      <nav class="menu">
+        <a href="#">Ofertas</a>
+        <a href="#">Promociones</a>
+        <a href="#">Novedades</a>
+      </nav>
+    </div>
 
-    <nav class="menu">
-      <a href="#">Ofertas</a>
-      <a href="#">Promociones</a>
-      <a href="#">Novedades</a>
-    </nav>
-  </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar productos..." class="search-input">
+      <button class="search-button">
+        <img src="https://images.vexels.com/media/users/3/140723/isolated/preview/158241d2079a635fb0cae49accb56da5-icono-de-lupa.png?w=360" alt="Buscar" class="search-icon">
+      </button>
+    </div>
 
-  <div class="search-bar">
-    <input type="text" placeholder="Buscar productos..." class="search-input">
-    <button class="search-button">
-      <img src="https://images.vexels.com/media/users/3/140723/isolated/preview/158241d2079a635fb0cae49accb56da5-icono-de-lupa.png?w=360" alt="Buscar" class="search-icon">
-    </button>
-  </div>
+    <div class="auth-buttons">
+      <a href="administracion.html" class="btn">Administracion</a>
+      <a href="registro.html" class="btn">Registrar</a>
+      <a href="inicio.html" class="btn">Inicio de sesión</a>
+    </div>
 
-   <div class="auth-buttons">
-    <a href="administracion.html" class="btn">Administracion</a>
-    <a href="registro.html" class="btn">Registrar</a>
-    <a href="inicio.html" class="btn">Inicio de sesión</a>
-  </div>
-
-  <a href="carrito.html" class="cart-link">
-    <svg class="cart-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round"
-        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9m-5-4h-4" />
-    </svg>
-  </a>
-</header>
+    <a href="carrito.html" class="cart-link">
+      <svg class="cart-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9m-5-4h-4" />
+      </svg>
+    </a>
+  </header>
 
   <div class="carrito-header">
     <h1>Carrito de compras</h1>
@@ -61,21 +60,23 @@
         <th>Acción</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="carrito-body">
+    </tbody>
+  </table>
+
+  <div class="favoritos-header">
+    <h2>Favoritos</h2>
+  </div>
+
+  <table>
+    <thead>
       <tr>
-        <td data-label="Producto">Leche</td>
-        <td data-label="Precio">$150</td>
-        <td data-label="Cantidad"><input type="number" value="1" min="1"></td>
-        <td data-label="Total">$150</td>
-        <td data-label="Acción"><button>Eliminar</button></td>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Acción</th>
       </tr>
-      <tr>
-        <td data-label="Producto">Arroz</td>
-        <td data-label="Precio">$200</td>
-        <td data-label="Cantidad"><input type="number" value="2" min="1"></td>
-        <td data-label="Total">$400</td>
-        <td data-label="Acción"><button>Eliminar</button></td>
-      </tr>
+    </thead>
+    <tbody id="favoritos-body">
     </tbody>
   </table>
 
@@ -84,14 +85,16 @@
       <button>Finalizar compra</button>
       <button>Seguir comprando</button>
     </div>
-    <p>Total a pagar: <strong>$550</strong> 🛒 ¡Gracias por tu compra!</p>
+    <p>Total a pagar: <strong></strong> 🛒 ¡Gracias por tu compra!</p>
   </div>
 
   <div class="footer">
     Carrito de compras
   </div>
-    <footer>
+  <footer>
     Valentin Reyes - Emanuel Alvarez - Sobrino Juancruz - 7MO 1ra Programacion Grupo A
   </footer>
+
+  <script src="js/carrito.js"></script>
 </body>
 </html>

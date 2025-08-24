@@ -71,8 +71,8 @@ textarea {
   cursor: pointer;
   text-align: center;
   width: 100%;
-  display: inline-block; /* para que tome padding y ancho */
-  text-decoration: none; /* sin subrayado */
+  display: inline-block; 
+  text-decoration: none; 
   border: none;
   font-size: 1rem;
   transition: background-color 0.3s ease;
@@ -80,7 +80,7 @@ textarea {
 
 .eliminar-btn:hover {
   background-color: #b91c1c;
-  color: white; /* para que no cambie color */
+  color: white; 
   text-decoration: none;
 }
 
@@ -98,7 +98,7 @@ form{
   width: 100%;
   padding: 10px;
   font-weight: bold;
-  background-color: #3498db; /* Azul (opcional) */
+  background-color: #3498db; 
   color: white;
   border: none;
   border-radius: 4px;
@@ -110,11 +110,10 @@ form{
 }
 
 
-/* Botón Cancelar estilo rojo */
 .cancelar-btn {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #e74c3c; /* Rojo */
+  background-color: #e74c3c;
   color: white;
   text-decoration: none;
   text-align: center;
@@ -126,6 +125,6 @@ form{
 }
 
 .cancelar-btn:hover {
-  background-color: #c0392b; /* Rojo más oscuro al pasar el mouse */
+  background-color: #c0392b; 
 }
 
