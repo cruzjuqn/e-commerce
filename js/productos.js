@@ -1,3 +1,4 @@
+
 const contenedorProductos = document.getElementById("contenedor-productos");
 const contenedorFavoritos = document.getElementById("contenedor-favoritos");
 
@@ -9,13 +10,16 @@ fetch("data/datos.json")
   .then(res => res.json())
   .then(data => {
     productos = data;
-    renderProductos();
-    renderFavoritos();
+
+    if (contenedorProductos) renderProductos();
+    if (contenedorFavoritos) renderFavoritos();
   })
   .catch(err => console.error("Error cargando productos:", err));
 
 function renderProductos() {
+  if (!contenedorProductos) return;
   contenedorProductos.innerHTML = "";
+
   productos.forEach(prod => {
     const imagen = prod.image ? `images/${prod.image}` : "images/placeholder.jpg";
     const isFavorito = favoritos.includes(prod.id);
@@ -26,35 +30,27 @@ function renderProductos() {
       <img src="${imagen}" alt="${prod.title}" />
       <h3>${prod.title}</h3>
       <p>${prod.description}</p>
-      <p class="price">$${prod.price}</p>
+      <p class="price">$${prod.price.toLocaleString()}</p>
       <button class="add-btn" data-id="${prod.id}">Agregar al carrito</button>
     `;
     contenedorProductos.appendChild(card);
 
-    const corazon = card.querySelector(".card-favorito");
-    corazon.addEventListener("click", () => {
-      const prodId = prod.id;
-      if (favoritos.includes(prodId)) {
-        favoritos = favoritos.filter(id => id !== prodId);
-        corazon.classList.remove("relleno");
-        alert(`${prod.title} fue eliminado de favoritos`);
+    card.querySelector(".card-favorito").addEventListener("click", () => {
+      if (favoritos.includes(prod.id)) {
+        favoritos = favoritos.filter(id => id !== prod.id);
+        card.querySelector(".card-favorito").classList.remove("relleno");
       } else {
-        favoritos.push(prodId);
-        corazon.classList.add("relleno");
-        alert(`${prod.title} agregado a favoritos`);
+        favoritos.push(prod.id);
+        card.querySelector(".card-favorito").classList.add("relleno");
       }
       localStorage.setItem("favoritos", JSON.stringify(favoritos));
-      renderFavoritos();
+      if (contenedorFavoritos) renderFavoritos();
     });
 
-    const addBtn = card.querySelector(".add-btn");
-    addBtn.addEventListener("click", () => {
+    card.querySelector(".add-btn").addEventListener("click", () => {
       const existing = carrito.find(item => item.id === prod.id);
-      if (existing) {
-        existing.cantidad += 1;
-      } else {
-        carrito.push({...prod, cantidad: 1});
-      }
+      if (existing) existing.cantidad += 1;
+      else carrito.push({...prod, cantidad: 1});
       localStorage.setItem("carrito", JSON.stringify(carrito));
       alert(`${prod.title} agregado al carrito`);
     });
@@ -77,28 +73,22 @@ function renderFavoritos() {
       <img src="${imagen}" alt="${prod.title}" />
       <h3>${prod.title}</h3>
       <p>${prod.description}</p>
-      <p class="price">$${prod.price}</p>
+      <p class="price">$${prod.price.toLocaleString()}</p>
       <button class="add-btn" data-id="${prod.id}">Agregar al carrito</button>
     `;
     contenedorFavoritos.appendChild(card);
 
-    const corazon = card.querySelector(".card-favorito");
-    corazon.addEventListener("click", () => {
+    card.querySelector(".card-favorito").addEventListener("click", () => {
       favoritos = favoritos.filter(id => id !== prod.id);
       localStorage.setItem("favoritos", JSON.stringify(favoritos));
       renderFavoritos();
-      renderProductos();
-      alert(`${prod.title} fue eliminado de favoritos`);
+      if (contenedorProductos) renderProductos();
     });
 
-    const addBtn = card.querySelector(".add-btn");
-    addBtn.addEventListener("click", () => {
+    card.querySelector(".add-btn").addEventListener("click", () => {
       const existing = carrito.find(item => item.id === prod.id);
-      if (existing) {
-        existing.cantidad += 1;
-      } else {
-        carrito.push({...prod, cantidad: 1});
-      }
+      if (existing) existing.cantidad += 1;
+      else carrito.push({...prod, cantidad: 1});
       localStorage.setItem("carrito", JSON.stringify(carrito));
       alert(`${prod.title} agregado al carrito`);
     });

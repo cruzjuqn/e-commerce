@@ -1,18 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const tbody = document.getElementById("carrito-body");
-  const tbodyFav = document.getElementById("favoritos-body");
 
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-  let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
-
-  let productos = [];
-  fetch("data/datos.json")
-    .then(res => res.json())
-    .then(data => {
-      productos = data;
-      renderFavoritos();
-    })
-    .catch(err => console.error("Error cargando productos:", err));
 
   function renderCarrito() {
     if (!tbody) return;
@@ -40,33 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalPago = document.querySelector(".carrito-footer strong");
     if (totalPago) totalPago.textContent = `$${total.toLocaleString()}`;
     localStorage.setItem("carrito", JSON.stringify(carrito));
-  }
-
-  function renderFavoritos() {
-    if (!tbodyFav || !productos.length) return;
-    tbodyFav.innerHTML = "";
-
-    favoritos.forEach(favId => {
-      const prod = productos.find(p => p.id === Number(favId));
-      if (!prod) return; 
-
-      const tr = document.createElement("tr");
-      tr.innerHTML = `
-        <td data-label="Producto">${prod.title}</td>
-        <td data-label="Precio">$${prod.price.toLocaleString()}</td>
-        <td data-label="Acción"><button class="eliminar-fav" data-id="${prod.id}">Eliminar</button></td>
-      `;
-      tbodyFav.appendChild(tr);
-    });
-
-    tbodyFav.querySelectorAll(".eliminar-fav").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const id = parseInt(btn.dataset.id);
-        favoritos = favoritos.filter(fav => fav !== id);
-        localStorage.setItem("favoritos", JSON.stringify(favoritos));
-        renderFavoritos();
-      });
-    });
   }
 
   if (tbody) {
